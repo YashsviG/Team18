@@ -1,0 +1,483 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HomePage</title>
+        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
+        
+body {
+/*  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/escheresque_ste.png');*/
+    background-image: url(drone.jpg);
+    color: aliceblue;
+    text-decoration: none;
+}
+.menu {
+  display: inline-block;
+  position: absolute;
+  width: 56px;
+  top: 5%;
+  left: 7%;
+  transform: translate(-50%, -50%);
+  font-size: 62px;
+  font-family:'Josefin Sans', sans-serif;
+  color: #fff;
+  cursor: pointer;
+}
+.menu::before,
+.menu::after {
+  position: absolute;
+  transition: 0.4s ease;
+  opacity: 0;
+  pointer-events: none;
+}
+.menu:before {
+  content: "M \00a0 \00a0 \00a0 \00a0 \00a0";
+  top: -60px;
+  left: -100%;
+  width: 250px;
+}
+.menu:after {
+  content: "DRONE";
+  top: 50px;
+  left: 96%;
+}
+.menu:hover::before,
+.menu:hover::after {
+  top: -4.3px;
+  opacity: 1;
+  transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
+}
+.bar {
+  width: 80%;
+  height: 3px;
+  background: white;
+  margin: 0 auto 18px;
+  transition: transform 0.4s ease;
+}
+/*.menu:hover .bar {*/
+/*  transform: rotate(-10deg);*/
+/*}*/
+        
+    #target {
+  background:#0099cc;
+  width:300px;
+  height:300px;
+  height:160px;
+  padding:5px;
+  display:none;
+}
+        
+        
+.button {
+  background-color: #b23831;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  margin-top:20%;
+  font-size: 50px;
+  margin-top: 20%;
+  margin-left: 65%;
+  cursor: pointer;
+  width: 250px;
+  height: 250px;
+  float:left;
+
+              
+}
+        .button:hover {background-color: brown;}
+.button:active {
+  background-color: brown;
+  box-shadow: 0 5px #666;
+  transform: translateY(4px);
+}
+.button5 {border-radius: 50%;
+        }
+    
+        
+        
+.button1, .button2 {
+  border-radius: 4px;
+  background-color: #b23831;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 150px;
+}
+.button2 {
+  border-radius: 4px;
+  background-color: #b23831;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 28px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 30px;
+  margin-left: 300px;
+}
+.button1 span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.button1 span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+.button1:hover span {
+  padding-right: 25px;
+}
+.button1:hover span:after {
+  opacity: 1;
+  right: 0;
+}    
+        .align1{
+            margin-top: -200px;
+            margin-left: 100px;
+        }
+        
+         .align2{
+            margin-top: 200px;
+            margin-left: 200px;
+        }
+        .align3{
+            margin-top: 0px;
+            margin-left: 700px;
+        }
+        .align4{
+            margin-top: -250px;
+            margin-left: 800px;
+        }
+       
+    
+.footer-distributed{
+	background-color: #473d2a;
+	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+	box-sizing: border-box;
+	width: 100%;
+	text-align: left;
+	font: bold 16px sans-serif;
+	padding: 55px 50px;
+	margin-top: 80px;
+}
+.footer-distributed .footer-left,
+.footer-distributed .footer-center,
+.footer-distributed .footer-right{
+	display: inline-block;
+	vertical-align: top;
+}
+/* Footer left */
+.footer-distributed .footer-left{
+	width: 40%;
+}
+/* The company logo */
+.footer-distributed h3{
+	color:  #ffffff;
+	font: normal 36px 'Cookie', cursive;
+	margin: 0;
+}
+.footer-distributed h3 span{
+	color:  #f75c13;
+}
+/* Footer links */
+.footer-distributed .footer-links{
+	color:  #ffffff;
+	margin: 20px 0 12px;
+	padding: 0;
+}
+.footer-distributed .footer-links a{
+	display:inline-block;
+	line-height: 1.8;
+	text-decoration: none;
+	color:  inherit;
+}
+.footer-distributed .footer-company-name{
+	color:  #8f9296;
+	font-size: 14px;
+	font-weight: normal;
+	margin: 0;
+}
+/* Footer Center */
+.footer-distributed .footer-center{
+	width: 35%;
+}
+.footer-distributed .footer-center i{
+	background-color:  #473d2a;
+	color: #ffffff;
+	font-size: 25px;
+	width: 38px;
+	height: 38px;
+	border-radius: 50%;
+	text-align: center;
+	line-height: 42px;
+	margin: 10px 15px;
+	vertical-align: middle;
+}
+.footer-distributed .footer-center i.fa-envelope{
+	font-size: 17px;
+	line-height: 38px;
+}
+.footer-distributed .footer-center p{
+	display: inline-block;
+	color: #ffffff;
+	vertical-align: middle;
+	margin:0;
+}
+.footer-distributed .footer-center p span{
+	display:block;
+	font-weight: normal;
+	font-size:14px;
+	line-height:2;
+}
+.footer-distributed .footer-center p a{
+	color:  #f75c13;
+	text-decoration: none;;
+}
+/* Footer Right */
+.footer-distributed .footer-right{
+	width: 20%;
+}
+.footer-distributed .footer-company-about{
+	line-height: 20px;
+	color:  #92999f;
+	font-size: 13px;
+	font-weight: normal;
+	margin: 0;
+}
+.footer-distributed .footer-company-about span{
+	display: block;
+	color:  #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom: 20px;
+}
+.footer-distributed .footer-icons{
+	margin-top: 25px;
+}
+.footer-distributed .footer-icons a{
+	display: inline-block;
+	width: 35px;
+	height: 35px;
+	cursor: pointer;
+	background-color:  #33383b;
+	border-radius: 2px;
+	font-size: 20px;
+	color: #ffffff;
+	text-align: center;
+	line-height: 35px;
+	margin-right: 3px;
+	margin-bottom: 5px;
+}
+        
+        
+    
+.things > .content {
+  float: left;
+  width: 50%;
+  height: 500px;
+  -webkit-box-sizing: border-box; 
+    -moz-box-sizing: border-box;    
+    box-sizing: border-box;
+  position: relative;
+}
+.things > .content h1 {
+  font-family: 'Arial', sans-serif;
+  text-transform: uppercase;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  position: absolute;
+  height: 150px;
+  color: #89323B;
+}
+.button2 {
+ 
+ 
+  height: 60px;
+  width: 50%;}
+        
+        
+@mixin btn-border-drawing($color: #ccc, $hover: black, $width: 2px, $vertical: top, $horizontal: left, $duration: 0.25s) {
+  box-shadow: inset 0 0 0 $width $color;
+  color: $color;
+  transition: color $duration $duration/3;
+  position: relative;
+  
+  &::before,
+  &::after {
+    border: 0 solid transparent;
+    box-sizing: border-box;
+    content: '';
+    pointer-events: none;
+    position: absolute;
+    width: 0; height: 0;
+    
+    #{$vertical}: 0; 
+    #{$horizontal}: 0;
+  }
+  &::before {
+    $h-side: if($horizontal == 'left', 'right', 'left');
+    
+    border-#{$vertical}-width: $width;
+    border-#{$h-side}-width: $width;
+  }
+  
+  &::after {
+    $v-side: if($vertical == 'top', 'bottom', 'top');
+    
+    border-#{$v-side}-width: $width;
+    border-#{$horizontal}-width: $width;
+  }
+  
+  &:hover {
+    color: $hover;
+    
+    &::before,
+    &::after {
+      border-color: $hover;
+      transition: border-color 0s, width $duration, height $duration;
+      width: 100%;
+      height: 100%;
+    }
+    
+    &::before { transition-delay: 0s, 0s, $duration; }
+    
+    &::after { transition-delay: 0s, $duration, 0s; }
+  }
+}
+.draw-border {
+  @include btn-border-drawing(#58afd1, #ffe593, 4px, bottom, right);
+}
+//=== Button styling, semi-ignore
+.btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1.5;
+  font: 700 1.2rem 'Roboto Slab', sans-serif;
+  padding: 1em 2em;
+  letter-spacing: 0.05rem;
+  
+  &:focus { outline: 2px dotted #55d7dc; }
+}
+        .button1{
+            width: 200px;
+            margin: 10px 10px 10px 10px;
+            height: 50px;
+            align-content: center;
+            margin-left: 600px;
+            clear: both;
+            float: left;
+        }
+    </style>
+
+
+<script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyCYHqMEnQqFpyqVgIpOeyJ8qiG9kyHbw6Y",
+    authDomain: "locatedrone.firebaseapp.com",
+    databaseURL: "https://locatedrone.firebaseio.com",
+    projectId: "locatedrone",
+    storageBucket: "locatedrone.appspot.com",
+    messagingSenderId: "575754815571"
+  };
+  firebase.initializeApp(config);
+</script>
+
+</head>
+
+    <body>
+
+    <h1 style="color: beige;">Select your current area.</h1>
+        <div class="button1 btn draw-border" id="Vancouver">
+           Vancouver
+            </div>
+        <div class="button1 btn draw-border" id="Surrey">
+           Surrey
+            </div>
+                <div class="button1 btn draw-border" id="Burnaby">
+           Burnaby
+            </div>
+
+                       <div class="button1 btn draw-border" id="Delta">
+           Delta
+            </div>
+           <a href="file:///C:/Users/Peng/Desktop/Drone/progressBar.html" <button class="button button2">Submit</button></a>
+
+     <script>
+        document.getElementById("Vancouver").addEventListener("click",
+            function(){
+                console.log("User clicked Vancouver");
+                ShowList("Vancouver");
+            }
+         );
+         
+          document.getElementById("Burnaby").addEventListener("click",
+             function(){
+               console.log("User clicked Burnaby");
+            ShowList("Burnaby");
+        }
+         );
+         
+          document.getElementById("Surrey").addEventListener("click",
+                                                     function(){
+               console.log("User clicked Surrey");
+            ShowList("Surrey");
+        }
+         );
+         
+                   document.getElementById("Delta").addEventListener("click",
+                                                     function(){
+               console.log("User clicked Delta");
+            ShowList("Delta");
+        }
+         );
+        function ShowList(category){
+        //var list[];
+        var dbRef = firebase.database().ref("locate/"+category);
+        var promise = dbRef.once("value",function(snap){
+                 list = snap.val();
+                 });
+    promise.then(function(){
+       DisplayList(list); //JSon Object
+    });
+            
+    }
+    function DisplayList(list){
+        console.log(list);
+        for(x in list){
+           var para = document.createElement("p");
+           document.body.appendChild(para);
+           var node = document.createTextNode(x);
+            para.display="inline";
+           para.appendChild(node);
+        }
+    }
+        </script>
+
+       
+
+    </body>
+
+</html>
