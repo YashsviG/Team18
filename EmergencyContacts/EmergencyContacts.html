@@ -2,263 +2,255 @@
 <html>
     <head>
         <title>Emergency contacts</title>
+	 <!-- CSS Styling -->
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <style>
-   @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
+        @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
         
-    body {
-    background-image: url(drone.jpg);
-}
-h1{
-  color:white;
-}
-h2{
-  color:white;
-}
-p{
-  color:white;
-}
-input[type=text] {
-  width:50%;
-  padding: 12px 20px;
-  margin: 8px 0;
-  box-sizing: border-box;
-}
-.menu {
-  display: inline-block;
-  position: absolute;
-  width: 56px;
-  top: 5%;
-  left: 7%;
-  transform: translate(-50%, -50%);
-  font-size: 62px;
-  font-family:'Josefin Sans', sans-serif;
-  color: #fff;
-  cursor: pointer;
-}
-.menu::before,
-.menu::after {
-  position: absolute;
-  transition: 0.4s ease;
-  opacity: 0;
-  pointer-events: none;
-}
-.menu:before {
-  content: "M \00a0 \00a0 \00a0 \00a0 \00a0";
-  top: -60px;
-  left: -100%;
-  width: 250px;
-}
-.menu:after {
-  content: "DRONE";
-  top: 50px;
-  left: 96%;
-}
-.menu:hover::before,
-.menu:hover::after {
-  top: -4.3px;
-  opacity: 1;
-  transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
-}
+	body {
+	    background-image: url(drone.jpg);
+	}
+	h1{
+	  color:white;
+	}
+	h2{
+	  color:white;
+	}
+	p{
+	  color:white;
+	}
+	input[type=text] {
+	  width:50%;
+	  padding: 12px 20px;
+	  margin: 8px 0;
+	  box-sizing: border-box;
+	}
+	.menu {
+	  display: inline-block;
+	  position: absolute;
+	  width: 56px;
+	  top: 5%;
+	  left: 7%;
+	  transform: translate(-50%, -50%);
+	  font-size: 62px;
+	  font-family:'Josefin Sans', sans-serif;
+	  color: #fff;
+	  cursor: pointer;
+	}
+	.menu::before,
+	.menu::after {
+	  position: absolute;
+	  transition: 0.4s ease;
+	  opacity: 0;
+	  pointer-events: none;
+	}
+	.menu:before {
+	  content: "M \00a0 \00a0 \00a0 \00a0 \00a0";
+	  top: -60px;
+	  left: -100%;
+	  width: 250px;
+	}
+	.menu:after {
+	  content: "DRONE";
+	  top: 50px;
+	  left: 96%;
+	}
+	.menu:hover::before,
+	.menu:hover::after {
+	  top: -4.3px;
+	  opacity: 1;
+	  transition: 0.2s ease, opacity 0.17s 0.03s ease-in;
+	}
 
-.bar {
-  width: 80%;
-  height: 3px;
-  background: white;
-  margin: 0 auto 18px;
-  transition: transform 0.4s ease;
-}
+	.bar {
+	  width: 80%;
+	  height: 3px;
+	  background: white;
+	  margin: 0 auto 18px;
+	  transition: transform 0.4s ease;
+	}
 
-/*.menu:hover .bar {*/
-/*  transform: rotate(-10deg);*/
-/*}*/
-        
-    #target {
-  background:#0099cc;
-  width:300px;
-  height:300px;
-  height:160px;
-  padding:5px;
-  display:none;
-}
-        
-        
+        #target {
+	  background:#0099cc;
+	  width:300px;
+	  height:300px;
+	  height:160px;
+	  padding:5px;
+	  display:none;
+	}
 
+	.footer-distributed{
+		background-color: #473d2a;
+		box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
+		box-sizing: border-box;
+		width: 100%;
+		text-align: left;
+		font: bold 16px sans-serif;
+		padding: 55px 50px;
+		margin-top: 80px;
+	}
 
-.footer-distributed{
-	background-color: #473d2a;
-	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
-	box-sizing: border-box;
-	width: 100%;
-	text-align: left;
-	font: bold 16px sans-serif;
-	padding: 55px 50px;
-	margin-top: 80px;
-}
+	.footer-distributed .footer-left,
+	.footer-distributed .footer-center,
+	.footer-distributed .footer-right{
+		display: inline-block;
+		vertical-align: top;
+	}
 
-.footer-distributed .footer-left,
-.footer-distributed .footer-center,
-.footer-distributed .footer-right{
-	display: inline-block;
-	vertical-align: top;
-}
+	/* Footer left */
 
-/* Footer left */
+	.footer-distributed .footer-left{
+		width: 40%;
+	}
 
-.footer-distributed .footer-left{
-	width: 40%;
-}
+	/* The company logo */
 
-/* The company logo */
+	.footer-distributed h3{
+		color:  #ffffff;
+		font: normal 36px 'Cookie', cursive;
+		margin: 0;
+	}
 
-.footer-distributed h3{
-	color:  #ffffff;
-	font: normal 36px 'Cookie', cursive;
-	margin: 0;
-}
+	.footer-distributed h3 span{
+		color:  #f75c13;
+	}
 
-.footer-distributed h3 span{
-	color:  #f75c13;
-}
+	/* Footer links */
 
-/* Footer links */
+	.footer-distributed .footer-links{
+		color:  #ffffff;
+		margin: 20px 0 12px;
+		padding: 0;
+	}
 
-.footer-distributed .footer-links{
-	color:  #ffffff;
-	margin: 20px 0 12px;
-	padding: 0;
-}
+	.footer-distributed .footer-links a{
+		display:inline-block;
+		line-height: 1.8;
+		text-decoration: none;
+		color:  inherit;
+	}
 
-.footer-distributed .footer-links a{
-	display:inline-block;
-	line-height: 1.8;
-	text-decoration: none;
-	color:  inherit;
-}
+	.footer-distributed .footer-company-name{
+		color:  #8f9296;
+		font-size: 14px;
+		font-weight: normal;
+		margin: 0;
+	}
 
-.footer-distributed .footer-company-name{
-	color:  #8f9296;
-	font-size: 14px;
-	font-weight: normal;
-	margin: 0;
-}
+	/* Footer Center */
 
-/* Footer Center */
+	.footer-distributed .footer-center{
+		width: 35%;
+	}
 
-.footer-distributed .footer-center{
-	width: 35%;
-}
+	.footer-distributed .footer-center i{
+		background-color:  #473d2a;
+		color: #ffffff;
+		font-size: 25px;
+		width: 38px;
+		height: 38px;
+		border-radius: 50%;
+		text-align: center;
+		line-height: 42px;
+		margin: 10px 15px;
+		vertical-align: middle;
+	}
 
-.footer-distributed .footer-center i{
-	background-color:  #473d2a;
-	color: #ffffff;
-	font-size: 25px;
-	width: 38px;
-	height: 38px;
-	border-radius: 50%;
-	text-align: center;
-	line-height: 42px;
-	margin: 10px 15px;
-	vertical-align: middle;
-}
+	.footer-distributed .footer-center i.fa-envelope{
+		font-size: 17px;
+		line-height: 38px;
+	}
 
-.footer-distributed .footer-center i.fa-envelope{
-	font-size: 17px;
-	line-height: 38px;
-}
+	.footer-distributed .footer-center p{
+		display: inline-block;
+		color: #ffffff;
+		vertical-align: middle;
+		margin:0;
+	}
 
-.footer-distributed .footer-center p{
-	display: inline-block;
-	color: #ffffff;
-	vertical-align: middle;
-	margin:0;
-}
+	.footer-distributed .footer-center p span{
+		display:block;
+		font-weight: normal;
+		font-size:14px;
+		line-height:2;
+	}
 
-.footer-distributed .footer-center p span{
-	display:block;
-	font-weight: normal;
-	font-size:14px;
-	line-height:2;
-}
-
-.footer-distributed .footer-center p a{
-	color:  #f75c13;
-	text-decoration: none;;
-}
+	.footer-distributed .footer-center p a{
+		color:  #f75c13;
+		text-decoration: none;;
+	}
 
 
-/* Footer Right */
+	/* Footer Right */
 
-.footer-distributed .footer-right{
-	width: 20%;
-}
+	.footer-distributed .footer-right{
+		width: 20%;
+	}
 
-.footer-distributed .footer-company-about{
-	line-height: 20px;
-	color:  #92999f;
-	font-size: 13px;
-	font-weight: normal;
-	margin: 0;
-}
+	.footer-distributed .footer-company-about{
+		line-height: 20px;
+		color:  #92999f;
+		font-size: 13px;
+		font-weight: normal;
+		margin: 0;
+	}
 
-.footer-distributed .footer-company-about span{
-	display: block;
-	color:  #ffffff;
-	font-size: 14px;
-	font-weight: bold;
-	margin-bottom: 20px;
-}
+	.footer-distributed .footer-company-about span{
+		display: block;
+		color:  #ffffff;
+		font-size: 14px;
+		font-weight: bold;
+		margin-bottom: 20px;
+	}
 
-.footer-distributed .footer-icons{
-	margin-top: 25px;
-}
+	.footer-distributed .footer-icons{
+		margin-top: 25px;
+	}
 
-.footer-distributed .footer-icons a{
-	display: inline-block;
-	width: 35px;
-	height: 35px;
-	cursor: pointer;
-	background-color:  #33383b;
-	border-radius: 2px;
+	.footer-distributed .footer-icons a{
+		display: inline-block;
+		width: 35px;
+		height: 35px;
+		cursor: pointer;
+		background-color:  #33383b;
+		border-radius: 2px;
 
-	font-size: 20px;
-	color: #ffffff;
-	text-align: center;
-	line-height: 35px;
+		font-size: 20px;
+		color: #ffffff;
+		text-align: center;
+		line-height: 35px;
 
-	margin-right: 3px;
-	margin-bottom: 5px;
-}
-        
-        
-    
-.things > .content {
-  float: left;
-  width: 50%;
-  height: 500px;
-  -webkit-box-sizing: border-box; 
-    -moz-box-sizing: border-box;    
-    box-sizing: border-box;
-  position: relative;
-}
+		margin-right: 3px;
+		margin-bottom: 5px;
+	}
 
-.things > .content h1 {
-  font-family: 'Arial', sans-serif;
-  text-transform: uppercase;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  position: absolute;
-  height: 150px;
-  color: #89323B;
-}
+	.things > .content {
+	  float: left;
+	  width: 50%;
+	  height: 500px;
+	  -webkit-box-sizing: border-box; 
+	    -moz-box-sizing: border-box;    
+	    box-sizing: border-box;
+	  position: relative;
+	}
+
+	.things > .content h1 {
+	  font-family: 'Arial', sans-serif;
+	  text-transform: uppercase;
+	  top: 0;
+	  bottom: 0;
+	  left: 0;
+	  right: 0;
+	  margin: auto;
+	  position: absolute;
+	  height: 150px;
+	  color: #89323B;
+	}
 
     </style>
-    </head>
+</head>
     
-    <body>
+ <body>
         
       <div class="menu">
       <div class="bar"></div>
@@ -271,6 +263,7 @@ input[type=text] {
 <tr>
 <th>
   <h2>Name 1</h2>
+<!-- Form -->
 <form>
   <label for="fname"><p>First Name</p></label>
   <input type="text" id="fname" name="fname">
@@ -295,31 +288,14 @@ input[type=text] {
 </form>
 </th>
 </tr>
- </table>
-
-
-
-
-
+    </table>
+  </table>
 </table>
-
-
-
-
-
-
-
-
-</table>
-
-
-
-
         
            <footer class="footer-distributed" id="contact">
-    	<div class="footer-left">
-            <h3>Med<span>Drone</span></h3>
-               <p class="footer-links">
+         	<div class="footer-left">
+                <h3>Med<span>Drone</span></h3>
+                <p class="footer-links">
 					<a href="#home">Home</a>
 					·
 					<a href="#">Blog</a>
