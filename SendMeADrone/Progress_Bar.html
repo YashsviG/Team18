@@ -2,6 +2,7 @@
 <html>
   <head>
       <title>Process_Bar</title>
+      <!--CSS sheet-->
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     
   </head>
@@ -9,8 +10,7 @@
   @import url('https://fonts.googleapis.com/css?family=Josefin+Sans:300');
         
         body {
-        /*  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/242518/escheresque_ste.png');*/
-            background-image: url(drone.jpg);
+	  background-image: url(drone.jpg);
         }
         .menu {
           display: inline-block;
@@ -56,12 +56,8 @@
           margin: 0 auto 18px;
           transition: transform 0.4s ease;
         }
-        
-        /*.menu:hover .bar {*/
-        /*  transform: rotate(-10deg);*/
-        /*}*/
-                
-            #target {
+ 
+	#target {
           background:#0099cc;
           width:300px;
           height:300px;
@@ -87,18 +83,17 @@
           height: 250px;
                       
         }
-                .button:hover {background-color: brown;}
+        .button:hover {background-color: brown;}
         
         .button:active {
           background-color: brown;
           box-shadow: 0 5px #666;
           transform: translateY(4px);
         }
-        .button5 {border-radius: 50%;
-                }
-            
-                
-                
+        .button5 {
+		border-radius: 50%;
+        }
+                   
         .button1, .button2 {
           border-radius: 4px;
           background-color: #f4511e;
@@ -111,7 +106,7 @@
           transition: all 0.5s;
           cursor: pointer;
           margin-top: 5px;
-            margin-left: 150px;
+          margin-left: 150px;
         }
         
         .button1 span {
@@ -138,23 +133,23 @@
           opacity: 1;
           right: 0;
         }    
-                .align1{
-                    margin-top: -200px;
-                    margin-left: 100px;
-                }
+         .align1{
+           margin-top: -200px;
+           margin-left: 100px;
+         }
                 
-                 .align2{
-                    margin-top: 200px;
-                    margin-left: 200px;
-                }
-                .align3{
-                    margin-top: 0px;
-                    margin-left: 700px;
-                }
-                .align4{
-                    margin-top: -250px;
-                    margin-left: 800px;
-                }
+         .align2{
+            margin-top: 200px;
+            margin-left: 200px;
+          }
+          .align3{
+             margin-top: 0px;
+             margin-left: 700px;
+          }
+          .align4{
+              margin-top: -250px;
+              margin-left: 800px;
+          }
                
             
         .footer-distributed{
@@ -326,172 +321,172 @@
           height: 150px;
           color: #89323B;
         }
-        
-#myProgress {
-  width: 80%;
-  margin-left: 10%;
-}
 
-#myBar {
-  width:80%;
-  height: 30px;
-  background-color: #4CAF50;
-}
-.step{
-  float: left;
-  line-height: -10px;
-  padding-left: 21%;
-}
+	#myProgress {
+	  width: 80%;
+	  margin-left: 10%;
+	}
 
-.subtitle{
-  width: 100%;
-  margin-left: 10%;
-}
-.subcontent{
-  float: left;
-  width: 25%;
-}
-* {
-  box-sizing: border-box;
-}
+	#myBar {
+	  width:80%;
+	  height: 30px;
+	  background-color: #4CAF50;
+	}
+	.step{
+	  float: left;
+	  line-height: -10px;
+	  padding-left: 21%;
+	}
 
-body {
-  background-color: #474e5d;
-  font-family: Helvetica, sans-serif;
-}
+	.subtitle{
+	  width: 100%;
+	  margin-left: 10%;
+	}
+	.subcontent{
+	  float: left;
+	  width: 25%;
+	}
+	* {
+	  box-sizing: border-box;
+	}
 
-/* The actual timeline (the vertical ruler) */
-.timeline {
-  position: relative;
-  max-width: 1200px;
-  margin: 0 auto;
-}
+	body {
+	  background-color: #474e5d;
+	  font-family: Helvetica, sans-serif;
+	}
 
-/* The actual timeline (the vertical ruler) */
-.timeline::after {
-  content: '';
-  position: absolute;
-  width: 6px;
-  background-color: white;
-  top: 0;
-  bottom: 0;
-  left: 50%;
-  margin-left: -3px;
-}
+	/* The actual timeline (the vertical ruler) */
+	.timeline {
+	  position: relative;
+	  max-width: 1200px;
+	  margin: 0 auto;
+	}
 
-/* Container around content */
-.container {
-  padding: 10px 40px;
-  position: relative;
-  background-color: inherit;
-  width: 50%;
-}
+	/* The actual timeline (the vertical ruler) */
+	.timeline::after {
+	  content: '';
+	  position: absolute;
+	  width: 6px;
+	  background-color: white;
+	  top: 0;
+	  bottom: 0;
+	  left: 50%;
+	  margin-left: -3px;
+	}
 
-/* The circles on the timeline */
-.container::after {
-  content: '';
-  position: absolute;
-  width: 25px;
-  height: 25px;
-  right: -17px;
-  background-color: red;
-  border: 4px solid #f4511e;
-  top: 15px;
-  border-radius: 50%;
-  z-index: 1;
-}
+	/* Container around content */
+	.container {
+	  padding: 10px 40px;
+	  position: relative;
+	  background-color: inherit;
+	  width: 50%;
+	}
 
-/* Place the container to the left */
-.left {
-  left: 0;
-}
+	/* The circles on the timeline */
+	.container::after {
+	  content: '';
+	  position: absolute;
+	  width: 25px;
+	  height: 25px;
+	  right: -17px;
+	  background-color: red;
+	  border: 4px solid #f4511e;
+	  top: 15px;
+	  border-radius: 50%;
+	  z-index: 1;
+	}
 
-/* Place the container to the right */
-.right {
-  left: 50%;
-}
+	/* Place the container to the left */
+	.left {
+	  left: 0;
+	}
 
-/* Add arrows to the left container (pointing right) */
-.left::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  right: 30px;
-  border: medium solid white;
-  border-width: 10px 0 10px 10px;
-  border-color: transparent transparent transparent white;
-}
+	/* Place the container to the right */
+	.right {
+	  left: 50%;
+	}
 
-/* Add arrows to the right container (pointing left) */
-.right::before {
-  content: " ";
-  height: 0;
-  position: absolute;
-  top: 22px;
-  width: 0;
-  z-index: 1;
-  left: 30px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-}
+	/* Add arrows to the left container (pointing right) */
+	.left::before {
+	  content: " ";
+	  height: 0;
+	  position: absolute;
+	  top: 22px;
+	  width: 0;
+	  z-index: 1;
+	  right: 30px;
+	  border: medium solid white;
+	  border-width: 10px 0 10px 10px;
+	  border-color: transparent transparent transparent white;
+	}
 
-/* Fix the circle for containers on the right side */
-.right::after {
-  left: -16px;
-}
+	/* Add arrows to the right container (pointing left) */
+	.right::before {
+	  content: " ";
+	  height: 0;
+	  position: absolute;
+	  top: 22px;
+	  width: 0;
+	  z-index: 1;
+	  left: 30px;
+	  border: medium solid white;
+	  border-width: 10px 10px 10px 0;
+	  border-color: transparent white transparent transparent;
+	}
 
-/* The actual content */
-.content {
-  padding: 20px 30px;
-  background-color: white;
-  position: relative;
-  border-radius: 6px;
-}
+	/* Fix the circle for containers on the right side */
+	.right::after {
+	  left: -16px;
+	}
 
-/* Media queries - Responsive timeline on screens less than 600px wide */
-@media screen and (max-width: 600px) {
-  /* Place the timelime to the left */
-  .timeline::after {
-  left: 31px;
-  }
-  
-  /* Full-width containers */
-  .container {
-  width: 100%;
-  padding-left: 70px;
-  padding-right: 25px;
-  }
-  
-  /* Make sure that all arrows are pointing leftwards */
-  .container::before {
-  left: 60px;
-  border: medium solid white;
-  border-width: 10px 10px 10px 0;
-  border-color: transparent white transparent transparent;
-  }
+	/* The actual content */
+	.content {
+	  padding: 20px 30px;
+	  background-color: white;
+	  position: relative;
+	  border-radius: 6px;
+	}
 
-  /* Make sure all circles are at the same spot */
-  .left::after, .right::after {
-  left: 15px;
-  }
-  
-  /* Make all right containers behave like the left ones */
-  .right {
-  left: 0%;
-  }
-}
-#myP{
- font-size:40px;
-  color:red;
-  text-align: center;
-}
-#myBar{
-  margin:30px;
-}
+	/* Media queries - Responsive timeline on screens less than 600px wide */
+	@media screen and (max-width: 600px) {
+	  /* Place the timelime to the left */
+	  .timeline::after {
+	  left: 31px;
+	  }
+
+	  /* Full-width containers */
+	  .container {
+	  width: 100%;
+	  padding-left: 70px;
+	  padding-right: 25px;
+	  }
+
+	  /* Make sure that all arrows are pointing leftwards */
+	  .container::before {
+	  left: 60px;
+	  border: medium solid white;
+	  border-width: 10px 10px 10px 0;
+	  border-color: transparent white transparent transparent;
+	  }
+
+	  /* Make sure all circles are at the same spot */
+	  .left::after, .right::after {
+	  left: 15px;
+	  }
+
+	  /* Make all right containers behave like the left ones */
+	  .right {
+	  left: 0%;
+	  }
+	}
+	#myP{
+	 font-size:40px;
+	  color:red;
+	  text-align: center;
+	}
+	#myBar{
+	  margin:30px;
+	}
 
 </style>
 <body onload="move()">
